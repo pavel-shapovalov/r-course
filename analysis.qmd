@@ -1,0 +1,56 @@
+---
+title: "Data"
+format:
+  html:
+    embed-resources: true
+---
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+data <- read_tsv("data/data_tsv.tsv", show_col_types = FALSE)
+data$Группа <- factor(data$Группа)
+data$Пол <- factor(data$Пол)
+data$`Группа крови` <- factor(
+  data$`Группа крови`,
+  levels = c("O (I)", "A (II)", "B (III)", "AB (IV)")
+)
+
+install.packages(
+  c(
+    "tidyverse",
+    "epiR",
+    "Hmisc",
+    "lmtest",
+    "multcomp",
+    "pROC",
+    "rstatix",
+    "sandwich",
+    "TrialSize",
+    "yardstick",
+    "FactoMineR",
+    "factoextra",
+    "ggbiplot",
+    "dagitty",
+    "ggdag",
+    "corrplot",
+    "ggExtra",
+    "GGally",
+    "ggfortify",
+    "ggpubr",
+    "pheatmap",
+    "plotly",
+    "flextable",
+    "openxlsx",
+    "gtsummary",
+    "devtools",
+    "knitr",
+    "rmarkdown",
+    "styler"
+  )
+)
+
+data
+```
