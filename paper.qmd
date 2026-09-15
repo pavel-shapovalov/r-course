@@ -6,10 +6,7 @@ format:
 ---
 
 ```{r}
-ddata <- read.csv("data/penguins.csv")
-
+data <- read.csv("data/penguins.csv")
 x <- data$bill_len
-
-hist(x, breaks = seq(30, 60, 2), xlab = "Bill length, mm")
-
+boxplot(x, ylab = "Bill length, mm")
 ```
