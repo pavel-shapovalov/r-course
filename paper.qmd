@@ -8,6 +8,9 @@ format:
 Ящик с усами для длины клюва.
 ```{r}
 data <- read.csv("data/penguins.csv")
+
 x <- data$bill_len
-boxplot(x, ylab = "Bill length, mm")
+g <- data$sex
+
+boxplot(x ~ g, xlab = "Sex", ylab = "Bill length, mm")
 ```
